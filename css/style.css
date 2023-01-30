@@ -1,0 +1,413 @@
+@import "bootstrap.css";
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+.container {
+  max-width: 1294px;
+}
+
+header .navbar-light .navbar-nav .nav-item {
+  margin-left: 17px;
+}
+header .navbar-light .navbar-nav .nav-item .nav-link {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav span {
+  background-image: url("../images/arrow_menu.svg");
+  width: 12px;
+  height: 8px;
+  display: inline-block;
+  background-position: center;
+  margin-left: 5px;
+}
+@media screen and (max-width: 992px) {
+  header .navbar-light .list {
+    display: none;
+  }
+}
+
+.main-banner {
+  margin-top: 90px;
+  max-height: 550px;
+}
+.main-banner .main {
+  padding-left: 56px;
+  background: #DCE5E2;
+  border-radius: 16px;
+}
+.main-banner .main .banner-text h1 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 58px;
+  line-height: 70px;
+  margin-bottom: 19px;
+}
+.main-banner .main .banner-text p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 30px;
+}
+.main-banner .main .banner-text .btn {
+  border: 1px solid #000000;
+  border-radius: 200px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 14px 53px;
+}
+.main-banner .owl-nav .owl-prev {
+  position: absolute;
+  left: 20px;
+  top: 220px;
+}
+.main-banner .owl-nav .owl-prev:after {
+  content: "\f053";
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  color: #08090D;
+  font-size: 25px;
+}
+.main-banner .owl-nav .owl-next {
+  position: absolute;
+  right: 20px;
+  top: 220px;
+}
+.main-banner .owl-nav .owl-next:before {
+  content: "\f054";
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  color: #08090D;
+  font-size: 25px;
+}
+.main-banner .owl-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0;
+}
+.main-banner .owl-dots span {
+  width: 194px;
+  height: 2px;
+  display: inline-block;
+  background-color: #000000;
+  margin-right: 14px;
+  margin-left: 14px;
+  position: relative;
+  top: -35px;
+}
+.main-banner .owl-dots .active span {
+  background-color: #F8F9FA;
+}
+
+.most-selled {
+  padding-top: 72px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+.most-selled h2 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 9px;
+}
+.most-selled p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 59px;
+}
+.most-selled article {
+  max-width: 303px;
+}
+.most-selled article .card-image {
+  max-width: 247px;
+  margin: auto;
+}
+.most-selled article .card-image img {
+  width: 100%;
+  display: block;
+}
+.most-selled article .best-selled-text {
+  margin-top: 33px;
+  text-align: left;
+}
+.most-selled article .best-selled-text h5 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 9px;
+}
+.most-selled article .best-selled-text p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 8px;
+  min-height: 51px;
+}
+.most-selled article .best-selled-text span {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.best-items {
+  padding-top: 47px;
+  padding-bottom: 28px;
+  text-align: center;
+}
+.best-items h2 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 9px;
+}
+.best-items p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 56px;
+}
+.best-items article {
+  max-width: 413px;
+  background-color: #F8F9FA;
+  border-radius: 16px;
+  padding-top: 41px;
+}
+.best-items article p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 1px;
+}
+.best-items article h5 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+.best-items article .btn {
+  border: 1px solid #000000;
+  border-radius: 200px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 14px 63px;
+  margin-bottom: 30px;
+}
+.best-items article .card-image-1 {
+  max-width: 259px;
+  margin: auto;
+}
+.best-items article .card-image-1 img {
+  width: 100%;
+  display: block;
+}
+.best-items article .card-image-2 {
+  max-width: 294px;
+  margin: auto;
+}
+.best-items article .card-image-2 img {
+  width: 100%;
+  display: block;
+}
+.best-items article .card-image-3 {
+  max-width: 355px;
+  margin: auto;
+}
+.best-items article .card-image-3 img {
+  width: 100%;
+  display: block;
+}
+
+.ideas {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+.ideas h3 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 9px;
+}
+.ideas p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 17px;
+  margin-bottom: 56px;
+}
+.ideas .row {
+  margin-bottom: 73px;
+}
+.ideas .row .ideas-image {
+  max-width: 620px;
+  border-radius: 3%;
+  overflow: hidden;
+}
+.ideas .row .ideas-image img {
+  width: 100%;
+  display: block;
+}
+.ideas .row .ideas-text {
+  top: 10px;
+  left: -25px;
+}
+.ideas .row .ideas-text ul {
+  list-style: none;
+}
+.ideas .row .ideas-text ul li {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+  margin-bottom: 28px;
+}
+.ideas a {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  text-decoration: none;
+}
+.ideas a:after {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/arrow.svg");
+  position: relative;
+  width: 30px;
+  height: 28px;
+  bottom: -6px;
+}
+
+footer {
+  padding: 45px 73px 3px 73px;
+  background-color: #F8F9FA;
+}
+footer .logo {
+  padding-bottom: 49px;
+}
+footer .logo .footer-logo {
+  max-width: 304px;
+}
+footer .logo .footer-logo p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 18px;
+}
+footer .logo .lists ul {
+  list-style: none;
+}
+footer .logo .lists ul li {
+  margin-bottom: 15px;
+}
+footer .logo .lists ul li a {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 22px;
+  text-decoration: none;
+}
+footer .logo .lists ul li:first-of-type {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  margin-bottom: 20px;
+}
+footer .authors {
+  padding-top: 53px;
+  border-top: 2px solid #DCE5E2;
+}
+footer .authors a {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration: none;
+}
+footer .authors a span {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
+footer .authors a:after {
+  content: "";
+  display: inline-block;
+  background-image: url("../images/arrow.svg");
+  position: relative;
+  width: 24px;
+  height: 22px;
+  position: relative;
+  bottom: -2px;
+}
+
+/*# sourceMappingURL=style.css.map */

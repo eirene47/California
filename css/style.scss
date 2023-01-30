@@ -1,0 +1,384 @@
+@import "bootstrap.css";
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+
+$font-inter: 'Inter', sans-serif;
+$font-readex: 'Readex Pro', sans-serif;
+
+@mixin basic-text{
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+}
+@mixin button{
+  border: 1px solid #000000;
+  border-radius: 200px;
+  @include basic-text;
+  font-family: $font-inter;
+  font-size: 18px;
+  line-height: 22px;
+}
+@mixin carousel-arrows{
+  display: inline-block;
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  color: #08090D;
+  font-size: 25px;
+}
+@mixin image{
+  width: 100%;
+  display: block;
+}
+@mixin arrow{
+  content: '';
+  display: inline-block;
+  background-image: url("../images/arrow.svg");
+  position: relative;
+}
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+.container{
+  max-width: 1294px;
+}
+header{
+   .navbar-light{
+    .navbar-nav{
+      .nav-item{
+        margin-left: 17px;
+        .nav-link{
+          @include basic-text;
+          font-family: $font-inter;
+          font-size: 14px;
+          line-height: 17px;
+          text-transform: uppercase;
+        }
+      }
+      span{
+        background-image: url("../images/arrow_menu.svg");
+        width: 12px;
+        height: 8px;
+        display: inline-block;
+        background-position: center;
+        margin-left: 5px;
+      }
+    }
+     .list{
+       @include max-screen(992px){
+         display: none;
+       }
+     }
+  }
+}
+.main-banner{
+  margin-top: 90px;
+  max-height: 550px;
+  .main{
+    padding-left: 56px;
+    background: #DCE5E2;
+    border-radius: 16px;
+    .banner-text{
+      h1{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 58px;
+        line-height: 70px;
+        margin-bottom: 19px;
+      }
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 16px;
+        line-height: 19px;
+        margin-bottom: 30px;
+      }
+      .btn{
+        @include button;
+        padding: 14px 53px;
+      }
+    }
+  }
+  .owl-nav{
+    .owl-prev{
+      position: absolute;
+      left: 20px;
+      top: 220px;
+      &:after{
+        content: '\f053';
+        @include carousel-arrows;
+      }
+    }
+    .owl-next{
+      position: absolute;
+      right: 20px;
+      top: 220px;
+      &:before{
+        content: '\f054';
+        @include carousel-arrows;
+      }
+    }
+  }
+  .owl-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    span{
+      width: 194px;
+      height: 2px;
+      display: inline-block;
+      background-color: #000000;
+      margin-right: 14px;
+      margin-left: 14px;
+      position: relative;
+      top: -35px;
+    }
+    .active{
+      span{
+        background-color: #F8F9FA;
+      }
+    }
+  }
+}
+.most-selled{
+  padding-top: 72px;
+  padding-bottom: 28px;
+  text-align: center;
+  h2{
+    @include basic-text;
+    font-family: $font-readex;
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 9px;
+  }
+  p{
+    @include basic-text;
+    font-family: $font-inter;
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 59px;
+  }
+  article{
+    max-width: 303px;
+    .card-image{
+      max-width: 247px;
+      margin: auto;
+      img{
+        @include image;
+      }
+    }
+    .best-selled-text{
+      margin-top: 33px;
+      text-align: left;
+      h5{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 9px;
+      }
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 8px;
+        min-height: 51px;
+      }
+      span{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+}
+.best-items{
+  padding-top: 47px;
+  padding-bottom: 28px;
+  text-align: center;
+  h2{
+    @include basic-text;
+    font-family: $font-readex;
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 9px;
+  }
+  p{
+    @include basic-text;
+    font-family: $font-inter;
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 56px;
+  }
+  article{
+    max-width: 413px;
+    background-color: #F8F9FA;
+    border-radius: 16px;
+    padding-top: 41px;
+    p{
+      @include basic-text;
+      font-family: $font-readex;
+      font-size: 13px;
+      line-height: 17px;
+      margin-bottom: 1px;
+    }
+    h5{
+      @include basic-text;
+      font-family: $font-readex;
+      font-size: 28px;
+      line-height: 35px;
+      margin-bottom: 30px;
+    }
+    .btn{
+      @include button;
+      padding: 14px 63px;
+      margin-bottom: 30px;
+    }
+    .card-image-1{
+      max-width: 259px;
+      margin: auto;
+      img{
+        @include image;
+      }
+    }
+    .card-image-2{
+      max-width: 294px;
+      margin: auto;
+      img{
+        @include image;
+      }
+    }
+    .card-image-3{
+      max-width: 355px;
+      margin: auto;
+      img{
+        @include image;
+      }
+    }
+  }
+}
+.ideas{
+  padding-top: 48px;
+  padding-bottom: 24px;
+  h3{
+    @include basic-text;
+    font-family: $font-readex;
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 9px;
+  }
+  p{
+    @include basic-text;
+    font-family: $font-inter;
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 56px;
+  }
+  .row{
+    margin-bottom: 73px;
+    .ideas-image{
+      max-width: 620px;
+      border-radius: 3%;
+      overflow: hidden;
+      img{
+        @include image;
+      }
+    }
+    .ideas-text{
+      top: 10px;
+      left: -25px;
+      ul{
+        list-style: none;
+        li{
+          @include basic-text;
+          font-family: $font-inter;
+          font-size: 24px;
+          line-height: 30px;
+          text-align: left;
+          margin-bottom: 28px;
+        }
+      }
+    }
+  }
+  a{
+    @include basic-text;
+    font-family: $font-inter;
+    font-size: 24px;
+    line-height: 29px;
+    text-decoration: none;
+    &:after{
+      @include arrow;
+      width: 30px;
+      height: 28px;
+      bottom: -6px;
+    }
+  }
+}
+footer{
+  padding: 45px 73px 3px 73px;
+  background-color: #F8F9FA;
+  .logo{
+    padding-bottom: 49px;
+    .footer-logo{
+      max-width: 304px;
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 16px;
+        line-height: 19px;
+        margin-top: 18px;
+      }
+    }
+    .lists{
+      ul{
+        list-style: none;
+        li{
+          margin-bottom: 15px;
+          a{
+            @include basic-text;
+            font-family: $font-inter;
+            font-size: 17px;
+            line-height: 22px;
+            text-decoration: none;
+          }
+          &:first-of-type{
+            @include basic-text;
+            font-family: $font-readex;
+            font-size: 22px;
+            line-height: 28px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+  .authors{
+    padding-top: 53px;
+    border-top: 2px solid #DCE5E2;
+    a{
+      span{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      @include basic-text;
+      font-family: $font-inter;
+      font-size: 18px;
+      line-height: 22px;
+      text-decoration: none;
+      &:after{
+        @include arrow;
+        width: 24px;
+        height: 22px;
+        position: relative;
+        bottom: -2px;
+      }
+    }
+  }
+}
