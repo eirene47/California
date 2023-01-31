@@ -145,7 +145,7 @@ header .navbar-light .navbar-nav span {
   max-width: 247px;
   margin: auto;
 }
-.most-selled article .card-image img {
+.most-selled article .card-image a img {
   width: 100%;
   display: block;
 }
@@ -153,7 +153,7 @@ header .navbar-light .navbar-nav span {
   margin-top: 33px;
   text-align: left;
 }
-.most-selled article .best-selled-text h5 {
+.most-selled article .best-selled-text h5 a {
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -161,6 +161,7 @@ header .navbar-light .navbar-nav span {
   font-size: 22px;
   line-height: 28px;
   margin-bottom: 9px;
+  text-decoration: none;
 }
 .most-selled article .best-selled-text p {
   font-style: normal;
@@ -244,7 +245,7 @@ header .navbar-light .navbar-nav span {
   max-width: 259px;
   margin: auto;
 }
-.best-items article .card-image-1 img {
+.best-items article .card-image-1 a img {
   width: 100%;
   display: block;
 }
@@ -252,7 +253,7 @@ header .navbar-light .navbar-nav span {
   max-width: 294px;
   margin: auto;
 }
-.best-items article .card-image-2 img {
+.best-items article .card-image-2 a img {
   width: 100%;
   display: block;
 }
@@ -260,7 +261,7 @@ header .navbar-light .navbar-nav span {
   max-width: 355px;
   margin: auto;
 }
-.best-items article .card-image-3 img {
+.best-items article .card-image-3 a img {
   width: 100%;
   display: block;
 }

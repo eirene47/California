@@ -166,19 +166,24 @@ header{
     .card-image{
       max-width: 247px;
       margin: auto;
-      img{
-        @include image;
+      a{
+        img{
+          @include image;
+        }
       }
     }
     .best-selled-text{
       margin-top: 33px;
       text-align: left;
       h5{
-        @include basic-text;
-        font-family: $font-readex;
-        font-size: 22px;
-        line-height: 28px;
-        margin-bottom: 9px;
+        a{
+          @include basic-text;
+          font-family: $font-readex;
+          font-size: 22px;
+          line-height: 28px;
+          margin-bottom: 9px;
+          text-decoration: none;
+        }
       }
       p{
         @include basic-text;
@@ -242,22 +247,28 @@ header{
     .card-image-1{
       max-width: 259px;
       margin: auto;
-      img{
-        @include image;
+      a{
+        img{
+          @include image;
+        }
       }
     }
-    .card-image-2{
+    .card-image-2 {
       max-width: 294px;
       margin: auto;
-      img{
-        @include image;
+      a{
+        img{
+          @include image;
+        }
       }
     }
     .card-image-3{
       max-width: 355px;
       margin: auto;
-      img{
-        @include image;
+      a{
+        img{
+          @include image;
+        }
       }
     }
   }
