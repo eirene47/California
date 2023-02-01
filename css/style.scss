@@ -1,7 +1,3 @@
-@import "bootstrap.css";
-@import "owl.carousel.css";
-@import "owl.theme.default.css";
-
 $font-inter: 'Inter', sans-serif;
 $font-readex: 'Readex Pro', sans-serif;
 
@@ -13,7 +9,8 @@ $font-readex: 'Readex Pro', sans-serif;
 @mixin button{
   border: 1px solid #000000;
   border-radius: 200px;
-  @include basic-text;
+  font-style: normal;
+  font-weight: 400;
   font-family: $font-inter;
   font-size: 18px;
   line-height: 22px;
@@ -49,6 +46,9 @@ header{
     .navbar-nav{
       .nav-item{
         margin-left: 17px;
+        @media screen and (max-width: 992px) {
+          margin-left: inherit;
+        }
         .nav-link{
           @include basic-text;
           font-family: $font-inter;
@@ -56,37 +56,69 @@ header{
           line-height: 17px;
           text-transform: uppercase;
         }
-      }
-      span{
-        background-image: url("../images/arrow_menu.svg");
-        width: 12px;
-        height: 8px;
-        display: inline-block;
-        background-position: center;
-        margin-left: 5px;
+        .dropdown-toggle{
+          &:after{
+            border: none;
+            background-image: url("../images/arrow_menu.svg");
+            width: 12px;
+            height: 8px;
+            position: relative;
+            top: 4px;
+          }
+        }
+        .dropdown-menu{
+          .dropdown-item{
+            @include basic-text;
+            font-family: $font-inter;
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
       }
     }
      .list{
        @include max-screen(992px){
+         position: absolute;
+         right: 70px;
+         top: 0;
+         .navbar-nav{
+           flex-direction: row;
+           li{
+             margin-left: 13px;
+           }
+         }
+       }
+       @include max-screen(360px){
          display: none;
        }
      }
   }
 }
 .main-banner{
-  margin-top: 90px;
-  max-height: 550px;
-  .main{
-    padding-left: 56px;
+  padding-top: 90px;
+  padding-bottom: 28px;
+  .container{
     background: #DCE5E2;
     border-radius: 16px;
+    @include max-screen(992px){
+      padding-top: 70px;
+      text-align: center;
+    }
     .banner-text{
+      padding-left: 51px;
+      @include max-screen(992px){
+        padding-left: 0;
+      }
       h1{
         @include basic-text;
         font-family: $font-readex;
         font-size: 58px;
         line-height: 70px;
         margin-bottom: 19px;
+        @include max-screen(576px){
+          font-size: 38px;
+          line-height: 50px;
+        }
       }
       p{
         @include basic-text;
@@ -95,10 +127,13 @@ header{
         line-height: 19px;
         margin-bottom: 30px;
       }
-      .btn{
+      .btn-outline-dark{
         @include button;
         padding: 14px 53px;
       }
+    }
+    .image{
+      max-width: 647px;
     }
   }
   .owl-nav{
@@ -111,14 +146,20 @@ header{
         @include carousel-arrows;
       }
     }
-    .owl-next{
-      position: absolute;
-      right: 20px;
-      top: 220px;
-      &:before{
-        content: '\f054';
-        @include carousel-arrows;
-      }
+    @include max-screen(992px){
+      display: none;
+    }
+  }
+  .owl-next{
+    position: absolute;
+    right: 20px;
+    top: 220px;
+    &:before{
+      content: '\f054';
+      @include carousel-arrows;
+    }
+    @include max-screen(992px){
+      display: none;
     }
   }
   .owl-dots{
@@ -128,18 +169,129 @@ header{
     height: 0;
     span{
       width: 194px;
-      height: 2px;
+      height: 3px;
       display: inline-block;
       background-color: #000000;
       margin-right: 14px;
       margin-left: 14px;
       position: relative;
       top: -35px;
+      @include max-screen(767px){
+        width: 97px;
+      }
+      @include max-screen(576px){
+        width: 35px;
+      }
     }
     .active{
       span{
         background-color: #F8F9FA;
       }
+    }
+  }
+}
+.latest-offers{
+  padding-top: 47px;
+  .laptops{
+    min-height: 472px;
+    padding: 0 27px;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+    margin-bottom: 50px;
+    .laptops-image{
+      max-width: 500px;
+      overflow: hidden;
+    }
+    .laptops-text{
+      text-align: right;
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 15px;
+        line-height: 19px;
+        margin-bottom: inherit;
+      }
+      h5{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  }
+  .watch{
+    min-height: 270px;
+    padding: 0 42px;
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+    .watch-image{
+      max-width: 381px;
+      overflow: hidden;
+    }
+    .watch-text{
+      text-align: right;
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 15px;
+        line-height: 19px;
+        margin-bottom: inherit;
+      }
+      h5{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  }
+  .phones{
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+    min-height: 792px;
+    .phones-image{
+      margin-bottom: 42px;
+      max-width: 296px;
+      overflow: hidden;
+      padding-left: 15px;
+    }
+    .phones-text{
+      text-align: center;
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 15px;
+        line-height: 19px;
+        margin-bottom: inherit;
+      }
+      h5{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+  }
+  .tablet{
+    box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+    min-height: 792px;
+    .tablet-text{
+      text-align: center;
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 15px;
+        line-height: 19px;
+        margin-bottom: inherit;
+      }
+      h5{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 32px;
+        line-height: 38px;
+      }
+    }
+    .tablet-image{
+      margin-bottom: 42px;
+      max-width: 312px;
+      overflow: hidden;
     }
   }
 }
@@ -163,15 +315,7 @@ header{
   }
   article{
     max-width: 303px;
-    .card-image{
-      max-width: 247px;
-      margin: auto;
-      a{
-        img{
-          @include image;
-        }
-      }
-    }
+    text-align: center;
     .best-selled-text{
       margin-top: 33px;
       text-align: left;
