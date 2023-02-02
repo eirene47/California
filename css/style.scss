@@ -297,7 +297,7 @@ header{
 }
 .most-selled{
   padding-top: 72px;
-  padding-bottom: 28px;
+  padding-bottom: 13px;
   text-align: center;
   h2{
     @include basic-text;
@@ -305,6 +305,10 @@ header{
     font-size: 42px;
     line-height: 52px;
     margin-bottom: 9px;
+    @include max-screen(767px){
+      font-size: 32px;
+      line-height: 42px;
+    }
   }
   p{
     @include basic-text;
@@ -312,10 +316,20 @@ header{
     font-size: 13px;
     line-height: 17px;
     margin-bottom: 59px;
+    @include max-screen(992px){
+      margin-bottom: 30px;
+    }
   }
   article{
     max-width: 303px;
     text-align: center;
+    @include max-screen(992px){
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    img{
+      @include image;
+    }
     .best-selled-text{
       margin-top: 33px;
       text-align: left;
@@ -348,7 +362,7 @@ header{
 }
 .best-items{
   padding-top: 47px;
-  padding-bottom: 28px;
+  padding-bottom: 13px;
   text-align: center;
   h2{
     @include basic-text;
@@ -356,6 +370,10 @@ header{
     font-size: 42px;
     line-height: 52px;
     margin-bottom: 9px;
+    @include max-screen(767px){
+      font-size: 32px;
+      line-height: 42px;
+    }
   }
   p{
     @include basic-text;
@@ -369,6 +387,10 @@ header{
     background-color: #F8F9FA;
     border-radius: 16px;
     padding-top: 41px;
+    @include max-screen(992px){
+      display: inline-block;
+      margin-bottom: 30px;
+    }
     p{
       @include basic-text;
       font-family: $font-readex;
@@ -383,7 +405,7 @@ header{
       line-height: 35px;
       margin-bottom: 30px;
     }
-    .btn{
+    .btn-outline-dark{
       @include button;
       padding: 14px 63px;
       margin-bottom: 30px;
@@ -391,28 +413,22 @@ header{
     .card-image-1{
       max-width: 259px;
       margin: auto;
-      a{
-        img{
-          @include image;
-        }
+      img{
+        @include image;
       }
     }
-    .card-image-2 {
+    .card-image-2{
       max-width: 294px;
       margin: auto;
-      a{
-        img{
-          @include image;
-        }
+      img{
+        @include image;
       }
     }
     .card-image-3{
       max-width: 355px;
       margin: auto;
-      a{
-        img{
-          @include image;
-        }
+      img{
+        @include image;
       }
     }
   }
@@ -426,6 +442,10 @@ header{
     font-size: 42px;
     line-height: 52px;
     margin-bottom: 9px;
+    @include max-screen(767px){
+      font-size: 32px;
+      line-height: 42px;
+    }
   }
   p{
     @include basic-text;
@@ -435,7 +455,7 @@ header{
     margin-bottom: 56px;
   }
   .row{
-    margin-bottom: 73px;
+    margin-bottom: 64px;
     .ideas-image{
       max-width: 620px;
       border-radius: 3%;
@@ -446,16 +466,16 @@ header{
     }
     .ideas-text{
       top: 10px;
-      left: -25px;
-      ul{
-        list-style: none;
-        li{
-          @include basic-text;
-          font-family: $font-inter;
-          font-size: 24px;
-          line-height: 30px;
-          text-align: left;
-          margin-bottom: 28px;
+      p{
+        @include basic-text;
+        font-family: $font-inter;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: left;
+        margin-bottom: 23px;
+        @include max-screen(767px){
+          font-size: 20px;
+          line-height: 25px;
         }
       }
     }
@@ -471,12 +491,22 @@ header{
       width: 30px;
       height: 28px;
       bottom: -6px;
+      @include max-screen(576px){
+        width: 27px;
+        height: 25px;
+      }
+    }
+    @include max-screen(576px){
+      font-size: 20px;
+      line-height: 25px;
     }
   }
 }
 footer{
-  padding: 45px 73px 3px 73px;
+  padding-top: 45px;
+  padding-bottom: 5px;
   background-color: #F8F9FA;
+  border-top: 1px solid #DCE5E2;
   .logo{
     padding-bottom: 49px;
     .footer-logo{
@@ -487,52 +517,79 @@ footer{
         font-size: 16px;
         line-height: 19px;
         margin-top: 18px;
+        @include max-screen(992px){
+          font-size: 14px;
+        }
+      }
+      @include max-screen(992px){
+        margin: auto;
       }
     }
-    .lists{
+    .footer-list{
+      h5{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 15px;
+        @include max-screen(992px){
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
       ul{
-        list-style: none;
         li{
-          margin-bottom: 15px;
+          margin-bottom: 10px;
           a{
             @include basic-text;
             font-family: $font-inter;
             font-size: 17px;
             line-height: 22px;
             text-decoration: none;
-          }
-          &:first-of-type{
-            @include basic-text;
-            font-family: $font-readex;
-            font-size: 22px;
-            line-height: 28px;
-            margin-bottom: 20px;
+            @include max-screen(992px){
+              font-size: 15px;
+              line-height: 20px;
+            }
           }
         }
       }
     }
+    @include max-screen(992px){
+      text-align: center;
+    }
   }
   .authors{
     padding-top: 53px;
-    border-top: 2px solid #DCE5E2;
+    border-top: 1px solid #DCE5E2;
     a{
       span{
         @include basic-text;
         font-family: $font-readex;
         font-size: 18px;
         line-height: 22px;
+        @include max-screen(992px){
+          font-size: 13px;
+          line-height: 20px;
+        }
       }
       @include basic-text;
       font-family: $font-inter;
       font-size: 18px;
       line-height: 22px;
       text-decoration: none;
+      @include max-screen(992px){
+        font-size: 13px;
+        line-height: 20px;
+      }
       &:after{
         @include arrow;
         width: 24px;
         height: 22px;
         position: relative;
         bottom: -2px;
+        @include max-screen(576px){
+          display: none;
+        }
       }
     }
   }

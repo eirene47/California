@@ -303,7 +303,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 
 .most-selled {
   padding-top: 72px;
-  padding-bottom: 28px;
+  padding-bottom: 13px;
   text-align: center;
 }
 .most-selled h2 {
@@ -315,6 +315,12 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   line-height: 52px;
   margin-bottom: 9px;
 }
+@media screen and (max-width: 767px) {
+  .most-selled h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
 .most-selled p {
   font-style: normal;
   font-weight: 400;
@@ -324,9 +330,24 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   line-height: 17px;
   margin-bottom: 59px;
 }
+@media screen and (max-width: 992px) {
+  .most-selled p {
+    margin-bottom: 30px;
+  }
+}
 .most-selled article {
   max-width: 303px;
   text-align: center;
+}
+@media screen and (max-width: 992px) {
+  .most-selled article {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+}
+.most-selled article img {
+  width: 100%;
+  display: block;
 }
 .most-selled article .best-selled-text {
   margin-top: 33px;
@@ -363,7 +384,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 
 .best-items {
   padding-top: 47px;
-  padding-bottom: 28px;
+  padding-bottom: 13px;
   text-align: center;
 }
 .best-items h2 {
@@ -374,6 +395,12 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   font-size: 42px;
   line-height: 52px;
   margin-bottom: 9px;
+}
+@media screen and (max-width: 767px) {
+  .best-items h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
 }
 .best-items p {
   font-style: normal;
@@ -389,6 +416,12 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   background-color: #F8F9FA;
   border-radius: 16px;
   padding-top: 41px;
+}
+@media screen and (max-width: 992px) {
+  .best-items article {
+    display: inline-block;
+    margin-bottom: 30px;
+  }
 }
 .best-items article p {
   font-style: normal;
@@ -408,7 +441,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   line-height: 35px;
   margin-bottom: 30px;
 }
-.best-items article .btn {
+.best-items article .btn-outline-dark {
   border: 1px solid #000000;
   border-radius: 200px;
   font-style: normal;
@@ -423,7 +456,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   max-width: 259px;
   margin: auto;
 }
-.best-items article .card-image-1 a img {
+.best-items article .card-image-1 img {
   width: 100%;
   display: block;
 }
@@ -431,7 +464,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   max-width: 294px;
   margin: auto;
 }
-.best-items article .card-image-2 a img {
+.best-items article .card-image-2 img {
   width: 100%;
   display: block;
 }
@@ -439,7 +472,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   max-width: 355px;
   margin: auto;
 }
-.best-items article .card-image-3 a img {
+.best-items article .card-image-3 img {
   width: 100%;
   display: block;
 }
@@ -457,6 +490,12 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   line-height: 52px;
   margin-bottom: 9px;
 }
+@media screen and (max-width: 767px) {
+  .ideas h3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
 .ideas p {
   font-style: normal;
   font-weight: 400;
@@ -467,7 +506,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   margin-bottom: 56px;
 }
 .ideas .row {
-  margin-bottom: 73px;
+  margin-bottom: 64px;
 }
 .ideas .row .ideas-image {
   max-width: 620px;
@@ -480,12 +519,8 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 }
 .ideas .row .ideas-text {
   top: 10px;
-  left: -25px;
 }
-.ideas .row .ideas-text ul {
-  list-style: none;
-}
-.ideas .row .ideas-text ul li {
+.ideas .row .ideas-text p {
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -493,7 +528,13 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   font-size: 24px;
   line-height: 30px;
   text-align: left;
-  margin-bottom: 28px;
+  margin-bottom: 23px;
+}
+@media screen and (max-width: 767px) {
+  .ideas .row .ideas-text p {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 .ideas a {
   font-style: normal;
@@ -513,10 +554,24 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   height: 28px;
   bottom: -6px;
 }
+@media screen and (max-width: 576px) {
+  .ideas a:after {
+    width: 27px;
+    height: 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ideas a {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
 
 footer {
-  padding: 45px 73px 3px 73px;
+  padding-top: 45px;
+  padding-bottom: 5px;
   background-color: #F8F9FA;
+  border-top: 1px solid #DCE5E2;
 }
 footer .logo {
   padding-bottom: 49px;
@@ -533,13 +588,35 @@ footer .logo .footer-logo p {
   line-height: 19px;
   margin-top: 18px;
 }
-footer .logo .lists ul {
-  list-style: none;
+@media screen and (max-width: 992px) {
+  footer .logo .footer-logo p {
+    font-size: 14px;
+  }
 }
-footer .logo .lists ul li {
+@media screen and (max-width: 992px) {
+  footer .logo .footer-logo {
+    margin: auto;
+  }
+}
+footer .logo .footer-list h5 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
   margin-bottom: 15px;
 }
-footer .logo .lists ul li a {
+@media screen and (max-width: 992px) {
+  footer .logo .footer-list h5 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+footer .logo .footer-list ul li {
+  margin-bottom: 10px;
+}
+footer .logo .footer-list ul li a {
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -548,18 +625,20 @@ footer .logo .lists ul li a {
   line-height: 22px;
   text-decoration: none;
 }
-footer .logo .lists ul li:first-of-type {
-  font-style: normal;
-  font-weight: 400;
-  color: #000000;
-  font-family: "Readex Pro", sans-serif;
-  font-size: 22px;
-  line-height: 28px;
-  margin-bottom: 20px;
+@media screen and (max-width: 992px) {
+  footer .logo .footer-list ul li a {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer .logo {
+    text-align: center;
+  }
 }
 footer .authors {
   padding-top: 53px;
-  border-top: 2px solid #DCE5E2;
+  border-top: 1px solid #DCE5E2;
 }
 footer .authors a {
   font-style: normal;
@@ -578,6 +657,18 @@ footer .authors a span {
   font-size: 18px;
   line-height: 22px;
 }
+@media screen and (max-width: 992px) {
+  footer .authors a span {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 992px) {
+  footer .authors a {
+    font-size: 13px;
+    line-height: 20px;
+  }
+}
 footer .authors a:after {
   content: "";
   display: inline-block;
@@ -587,6 +678,11 @@ footer .authors a:after {
   height: 22px;
   position: relative;
   bottom: -2px;
+}
+@media screen and (max-width: 576px) {
+  footer .authors a:after {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
