@@ -567,6 +567,178 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   }
 }
 
+.information {
+  padding-top: 51px;
+  padding-bottom: 19px;
+}
+.information h3 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 992px) {
+  .information h3 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+}
+.information .search {
+  padding-bottom: 68px;
+}
+.information .search .form-inline {
+  max-width: 650px;
+  padding-bottom: 18px;
+}
+.information .search .form-inline .form-control {
+  padding: 22px 63px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  background: #F8F9FA;
+  border: 1px solid #C5C5C5;
+  border-radius: 100px;
+  width: 100%;
+  height: 60px;
+}
+.information .search .form-inline .btn {
+  background-image: url("../images/search.svg");
+  width: 25px;
+  height: 25px;
+  left: 25px;
+}
+.information .search .keywords {
+  max-width: 660px;
+  padding: 0 60px;
+  gap: 5px;
+}
+.information .search .keywords a {
+  padding: 13px 22px;
+  background-color: #FFFFFF;
+  border: 1px solid #C5C5C5;
+  border-radius: 200px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration: none;
+}
+@media screen and (max-width: 550px) {
+  .information .search .keywords a:nth-child(4) {
+    display: none;
+  }
+  .information .search .keywords a:nth-child(5) {
+    display: none;
+  }
+  .information .search .keywords a:nth-child(6) {
+    display: none;
+  }
+}
+@media screen and (max-width: 430px) {
+  .information .search .keywords a:nth-child(2) {
+    display: none;
+  }
+  .information .search .keywords a:nth-child(7) {
+    display: none;
+  }
+  .information .search .keywords a:nth-child(9) {
+    display: none;
+  }
+}
+.information .sign-up {
+  max-width: 935px;
+  padding-top: 47px;
+  padding-bottom: 43px;
+  background-color: #DCE5E2;
+  border-radius: 16px;
+}
+.information .sign-up h4 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 9px;
+}
+@media screen and (max-width: 992px) {
+  .information .sign-up h4 {
+    font-size: 35px;
+    line-height: 42px;
+  }
+}
+.information .sign-up p {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 14px;
+}
+@media screen and (max-width: 992px) {
+  .information .sign-up p {
+    font-size: 14px;
+  }
+}
+.information .sign-up .sign-up-image {
+  margin-bottom: 14px;
+}
+.information .sign-up .form-sign-up {
+  max-width: 400px;
+}
+.information .sign-up .form-sign-up .form-group {
+  margin: inherit;
+}
+.information .sign-up .form-sign-up .form-group .form-control {
+  padding: 16px 32px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: #DCE5E2;
+  border: 1px solid #000000;
+  border-radius: 54px 0 0 54px;
+  width: 285px;
+  height: 50px;
+}
+@media screen and (max-width: 576px) {
+  .information .sign-up .form-sign-up .form-group .form-control {
+    border-radius: 54px;
+    width: 275px;
+    margin: auto;
+  }
+}
+.information .sign-up .form-sign-up .btn-dark {
+  padding: 16px 32px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-size: 14px;
+  line-height: 17px;
+  color: #FFFFFF;
+  background-color: #000000;
+  border-radius: 0 200px 200px 0;
+  width: 115px;
+  height: 50px;
+}
+@media screen and (max-width: 576px) {
+  .information .sign-up .form-sign-up .btn-dark {
+    border-radius: 200px;
+    margin-top: 10px;
+  }
+}
+
 footer {
   padding-top: 45px;
   padding-bottom: 5px;

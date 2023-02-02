@@ -92,7 +92,7 @@
                         <a class="btn btn-outline-dark" href="#">Explore</a>
                     </div>
                 </div>
-                <div class="image col-lg-6 col-12">
+                <div class="image col-lg-6 col-12 m-auto">
                     <img src="images/main_image.png" alt="image">
                 </div>
             </div>
@@ -106,7 +106,7 @@
                         <a class="btn btn-outline-dark" href="#">Explore</a>
                     </div>
                 </div>
-                <div class="image col-lg-6 col-12">
+                <div class="image col-lg-6 col-12 m-auto">
                     <img src="images/main_image.png" alt="image">
                 </div>
             </div>
@@ -268,7 +268,7 @@
                         <img src="images/image1.png" alt="image">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 c mb-2">
+                <div class="col-lg-6 col-md-12 mb-2">
                     <div class="ideas-text position-relative">
                         <p>We Make It Easy To Find The Great Design Talent, Easier...</p>
                         <p>Road Design Handbook For The International Road...</p>
@@ -281,17 +281,26 @@
         </div>
     </section>
     <section class="information">
-        <div class="container">
+        <div class="container text-center">
             <div class="search">
-                <form name="search" action="#" method="post">
-
+                <h3>Looking for anything else?</h3>
+                <form name="search-up" action="#" method="post" class="form-inline position-relative m-auto">
+                    <button class="btn position-absolute" type="submit"></button>
+                    <input class="form-control" type="text" placeholder="Search keyword" aria-label="Search">
                 </form>
-                <form class="form-inline mt-2 mt-md-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <div class="keywords d-flex flex-wrap justify-content-center m-auto">
+                    <a href="#">iPhone</a>
+                    <a href="#">Charger</a>
+                    <a href="#">Gift</a>
+                    <a href="#">Google Pixel 3</a>
+                    <a href="#">Keyboard</a>
+                    <a href="#">13 Pro Max</a>
+                    <a href="#">iPhone 12</a>
+                    <a href="#">Laptop</a>
+                    <a href="#">Mobile</a>
+                </div>
             </div>
-            <div class="sign-up">
+            <div class="sign-up m-auto">
                 <h4>Never miss a thing</h4>
                 <p>
                     Sign up for texts to be notified about our best offers on the perfect gifts.
@@ -299,10 +308,12 @@
                 <div class="sign-up-image">
                     <img src="images/image2.png" alt="image">
                 </div>
-                <form name="sign-up" action="#" method="post">
-                    <label for="email"></label>
-                    <input type="email" name="email" placeholder="Your email" id="email">
-                    <button type="submit">Sign up</button>
+                <form name="sign-up" class="form-sign-up d-sm-flex m-auto" action="#" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="d-none"></label>
+                        <input type="email" name="email" class="m-sm-auto form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Your email">
+                    </div>
+                    <button type="submit" class="btn btn-dark">Sign up</button>
                 </form>
             </div>
         </div>
