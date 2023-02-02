@@ -22,10 +22,6 @@ $font-readex: 'Readex Pro', sans-serif;
   color: #08090D;
   font-size: 25px;
 }
-@mixin image{
-  width: 100%;
-  display: block;
-}
 @mixin arrow{
   content: '';
   display: inline-block;
@@ -192,17 +188,38 @@ header{
 }
 .latest-offers{
   padding-top: 47px;
+  h2{
+    @include basic-text;
+    font-family: $font-readex;
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 9px;
+  }
+  p{
+    @include basic-text;
+    font-family: $font-inter;
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 55px;
+  }
   .laptops{
     min-height: 472px;
     padding: 0 27px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
     margin-bottom: 50px;
-    .laptops-image{
-      max-width: 500px;
-      overflow: hidden;
+    background-image: url("../images/card1_1.png");
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    @include max-screen(992px){
+      max-width: 639px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include max-screen(576px){
+      background-position-x: center;
+      background-position-y: -10px;
     }
     .laptops-text{
-      text-align: right;
       p{
         @include basic-text;
         font-family: $font-inter;
@@ -211,23 +228,41 @@ header{
         margin-bottom: inherit;
       }
       h5{
-        @include basic-text;
-        font-family: $font-readex;
-        font-size: 32px;
-        line-height: 38px;
+        a{
+          @include basic-text;
+          font-family: $font-readex;
+          font-size: 32px;
+          line-height: 38px;
+          text-decoration: none;
+          @include max-screen(768){
+            font-size: 28px;
+            line-height: 36px;
+          }
+        }
       }
+    }
+    bottom: 0;
+    transition: 0.4s;
+    &:hover{
+      bottom: -22px;
     }
   }
   .watch{
     min-height: 270px;
     padding: 0 42px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
-    .watch-image{
-      max-width: 381px;
-      overflow: hidden;
+    background-image: url("../images/card1_2.png");
+    background-repeat: no-repeat;
+    background-position-x: 40px;
+    @include max-screen(992px){
+      max-width: 639px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include max-screen(576px){
+      background-position-x: center;
     }
     .watch-text{
-      text-align: right;
       p{
         @include basic-text;
         font-family: $font-inter;
@@ -236,24 +271,33 @@ header{
         margin-bottom: inherit;
       }
       h5{
-        @include basic-text;
-        font-family: $font-readex;
-        font-size: 32px;
-        line-height: 38px;
+        a{
+          @include basic-text;
+          font-family: $font-readex;
+          font-size: 32px;
+          line-height: 38px;
+          text-decoration: none;
+        }
       }
+    }
+    bottom: 0;
+    transition: 0.4s;
+    &:hover{
+      bottom: -22px;
     }
   }
   .phones{
+    height: 792px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
-    min-height: 792px;
-    .phones-image{
-      margin-bottom: 42px;
-      max-width: 296px;
-      overflow: hidden;
-      padding-left: 15px;
+    padding: 144px 0;
+    background-image: url("../images/card1_3.png");
+    background-repeat: no-repeat;
+    background-position-x: 15px;
+    background-position-y: 144px;
+    @include max-screen(768px){
+      max-width: 312px;
     }
     .phones-text{
-      text-align: center;
       p{
         @include basic-text;
         font-family: $font-inter;
@@ -262,18 +306,34 @@ header{
         margin-bottom: inherit;
       }
       h5{
-        @include basic-text;
-        font-family: $font-readex;
-        font-size: 32px;
-        line-height: 38px;
+        a{
+          @include basic-text;
+          font-family: $font-readex;
+          font-size: 32px;
+          line-height: 38px;
+          text-decoration: none;
+        }
       }
+    }
+    bottom: 0;
+    transition: 0.4s;
+    &:hover{
+      bottom: -22px;
     }
   }
   .tablet{
+    height: 792px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
-    min-height: 792px;
+    padding: 115px 0;
+    background-image: url("../images/card1_4.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 252px;
+    @include max-screen(768px){
+      max-width: 312px;
+    }
+
     .tablet-text{
-      text-align: center;
       p{
         @include basic-text;
         font-family: $font-inter;
@@ -282,21 +342,24 @@ header{
         margin-bottom: inherit;
       }
       h5{
-        @include basic-text;
-        font-family: $font-readex;
-        font-size: 32px;
-        line-height: 38px;
+        a{
+          @include basic-text;
+          font-family: $font-readex;
+          font-size: 32px;
+          line-height: 38px;
+          text-decoration: none;
+        }
       }
     }
-    .tablet-image{
-      margin-bottom: 42px;
-      max-width: 312px;
-      overflow: hidden;
+    bottom: 0;
+    transition: 0.4s;
+    &:hover{
+      bottom: -22px;
     }
   }
 }
 .most-selled{
-  padding-top: 72px;
+  padding-top: 22px;
   padding-bottom: 13px;
   text-align: center;
   h2{
@@ -326,9 +389,6 @@ header{
     @include max-screen(992px){
       display: inline-block;
       margin-bottom: 15px;
-    }
-    img{
-      @include image;
     }
     .best-selled-text{
       margin-top: 33px;
@@ -384,12 +444,14 @@ header{
   }
   article{
     max-width: 413px;
+    height: 453px;
     background-color: #F8F9FA;
     border-radius: 16px;
     padding-top: 41px;
     @include max-screen(992px){
-      display: inline-block;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
     }
     p{
       @include basic-text;
@@ -410,25 +472,11 @@ header{
       padding: 14px 63px;
       margin-bottom: 30px;
     }
-    .card-image-1{
-      max-width: 259px;
-      margin: auto;
-      img{
-        @include image;
-      }
-    }
-    .card-image-2{
-      max-width: 294px;
-      margin: auto;
-      img{
-        @include image;
-      }
-    }
-    .card-image-3{
-      max-width: 355px;
-      margin: auto;
-      img{
-        @include image;
+    img{
+      margin-left: auto;
+      margin-right: auto;
+      @include max-screen(370px){
+        width: 90%;
       }
     }
   }
@@ -460,9 +508,6 @@ header{
       max-width: 620px;
       border-radius: 3%;
       overflow: hidden;
-      img{
-        @include image;
-      }
     }
     .ideas-text{
       top: 10px;
