@@ -303,7 +303,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   background-position-x: 15px;
   background-position-y: 144px;
   bottom: 0;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 @media screen and (max-width: 768px) {
   .latest-offers .phones {
