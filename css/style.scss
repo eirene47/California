@@ -116,6 +116,17 @@ header{
           line-height: 50px;
         }
       }
+      .h1{
+        @include basic-text;
+        font-family: $font-readex;
+        font-size: 58px;
+        line-height: 70px;
+        margin-bottom: 19px;
+        @include max-screen(576px){
+          font-size: 38px;
+          line-height: 50px;
+        }
+      }
       p{
         @include basic-text;
         font-family: $font-inter;
@@ -207,13 +218,11 @@ header{
     padding: 0 27px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
     margin-bottom: 50px;
-    background-image: url("../images/card1_1.png");
+    background-image: url("../images/card1_1.jpg");
     background-repeat: no-repeat;
     background-position-x: 40px;
     @include max-screen(992px){
-      max-width: 639px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
     }
     @include max-screen(576px){
       background-position-x: center;
@@ -251,13 +260,13 @@ header{
     min-height: 270px;
     padding: 0 42px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
-    background-image: url("../images/card1_2.png");
+    background-image: url("../images/card1_2.jpg");
     background-repeat: no-repeat;
     background-position-x: 40px;
     @include max-screen(992px){
-      max-width: 639px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      /*margin-left: auto;
+      margin-right: auto;*/
     }
     @include max-screen(576px){
       background-position-x: center;
@@ -290,12 +299,12 @@ header{
     height: 792px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
     padding: 144px 0;
-    background-image: url("../images/card1_3.png");
+    background-image: url("../images/card1_3.jpg");
     background-repeat: no-repeat;
     background-position-x: 15px;
     background-position-y: 144px;
-    @include max-screen(768px){
-      max-width: 312px;
+    @include max-screen(496px){
+      width: 100%;
     }
     .phones-text{
       p{
@@ -325,14 +334,13 @@ header{
     height: 792px;
     box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
     padding: 115px 0;
-    background-image: url("../images/card1_4.png");
+    background-image: url("../images/card1_4.jpg");
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: 252px;
-    @include max-screen(768px){
-      max-width: 312px;
+    @include max-screen(496px){
+      width: 100%;
     }
-
     .tablet-text{
       p{
         @include basic-text;
@@ -386,9 +394,11 @@ header{
   article{
     max-width: 303px;
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
     @include max-screen(992px){
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .best-selled-text{
       margin-top: 33px;
@@ -418,18 +428,22 @@ header{
         line-height: 22px;
       }
     }
+    transition: 0.4s;
+    &:hover{
+      box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+    }
   }
 }
 .best-items{
   padding-top: 47px;
   padding-bottom: 13px;
   text-align: center;
-  h2{
+  h3{
     @include basic-text;
     font-family: $font-readex;
     font-size: 42px;
     line-height: 52px;
-    margin-bottom: 9px;
+    margin-bottom: 15px;
     @include max-screen(767px){
       font-size: 32px;
       line-height: 42px;
@@ -444,10 +458,10 @@ header{
   }
   article{
     max-width: 413px;
-    height: 453px;
     background-color: #F8F9FA;
     border-radius: 16px;
     padding-top: 41px;
+    padding-bottom: 10px;
     @include max-screen(992px){
       margin-bottom: 20px;
       margin-left: auto;
@@ -478,6 +492,10 @@ header{
       @include max-screen(370px){
         width: 90%;
       }
+    }
+    transition: 0.4s;
+    &:hover{
+      box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
     }
   }
 }
@@ -550,24 +568,24 @@ header{
 .information{
   padding-top: 51px;
   padding-bottom: 19px;
-  h3{
-    @include basic-text;
-    font-family: $font-readex;
-    font-size: 42px;
-    line-height: 52px;
-    margin-bottom: 24px;
-    @include max-screen(992px){
-      font-size: 38px;
-      line-height: 42px;
-    }
-  }
   .search{
     padding-bottom: 68px;
+    h3{
+      @include basic-text;
+      font-family: $font-readex;
+      font-size: 42px;
+      line-height: 52px;
+      margin-bottom: 24px;
+      @include max-screen(992px){
+        font-size: 38px;
+        line-height: 42px;
+      }
+    }
     .form-inline{
       max-width: 650px;
-      padding-bottom: 18px;
       .form-control{
         padding: 22px 63px;
+        margin-bottom: 18px;
         @include basic-text;
         font-family: $font-inter;
         font-size: 14px;
@@ -582,43 +600,48 @@ header{
         background-image: url("../images/search.svg");
         width: 25px;
         height: 25px;
-        left: 25px;
+        left: 22px;
+        top: 17px;
       }
-    }
-    .keywords{
-      max-width: 660px;
-      padding: 0 60px;
-      gap: 5px;
-      a{
-        padding: 13px 22px;
-        background-color: #FFFFFF;
-        border: 1px solid #C5C5C5;
-        border-radius: 200px;
-        @include basic-text;
-        font-family: $font-inter;
-        font-size: 14px;
-        line-height: 17px;
-        text-decoration: none;
-        @include max-screen(550px){
-          &:nth-child(4){
-            display: none;
+      .keywords{
+        max-width: 660px;
+        padding: 0 60px;
+        gap: 5px;
+        a{
+          padding: 13px 22px;
+          background-color: #FFFFFF;
+          border: 1px solid #C5C5C5;
+          border-radius: 200px;
+          @include basic-text;
+          font-family: $font-inter;
+          font-size: 14px;
+          line-height: 17px;
+          text-decoration: none;
+          transition: 0.4s;
+          &:hover{
+            background-color: #DCE5E2;
           }
-          &:nth-child(5){
-            display: none;
+          @include max-screen(550px){
+            &:nth-child(4){
+              display: none;
+            }
+            &:nth-child(5){
+              display: none;
+            }
+            &:nth-child(6){
+              display: none;
+            }
           }
-          &:nth-child(6){
-            display: none;
-          }
-        }
-        @include max-screen(430px){
-          &:nth-child(2){
-            display: none;
-          }
-          &:nth-child(7){
-            display: none;
-          }
-          &:nth-child(9){
-            display: none;
+          @include max-screen(430px){
+            &:nth-child(2){
+              display: none;
+            }
+            &:nth-child(7){
+              display: none;
+            }
+            &:nth-child(9){
+              display: none;
+            }
           }
         }
       }

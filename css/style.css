@@ -91,6 +91,21 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
     line-height: 50px;
   }
 }
+.main-banner .container .banner-text .h1 {
+  font-style: normal;
+  font-weight: 400;
+  color: #000000;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 58px;
+  line-height: 70px;
+  margin-bottom: 19px;
+}
+@media screen and (max-width: 576px) {
+  .main-banner .container .banner-text .h1 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
 .main-banner .container .banner-text p {
   font-style: normal;
   font-weight: 400;
@@ -205,7 +220,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   padding: 0 27px;
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
   margin-bottom: 50px;
-  background-image: url("../images/card1_1.png");
+  background-image: url("../images/card1_1.jpg");
   background-repeat: no-repeat;
   background-position-x: 40px;
   bottom: 0;
@@ -213,9 +228,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 }
 @media screen and (max-width: 992px) {
   .latest-offers .laptops {
-    max-width: 639px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
   }
 }
 @media screen and (max-width: 576px) {
@@ -255,7 +268,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   min-height: 270px;
   padding: 0 42px;
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
-  background-image: url("../images/card1_2.png");
+  background-image: url("../images/card1_2.jpg");
   background-repeat: no-repeat;
   background-position-x: 40px;
   bottom: 0;
@@ -263,9 +276,9 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 }
 @media screen and (max-width: 992px) {
   .latest-offers .watch {
-    max-width: 639px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    /*margin-left: auto;
+    margin-right: auto;*/
   }
 }
 @media screen and (max-width: 576px) {
@@ -298,16 +311,16 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   height: 792px;
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
   padding: 144px 0;
-  background-image: url("../images/card1_3.png");
+  background-image: url("../images/card1_3.jpg");
   background-repeat: no-repeat;
   background-position-x: 15px;
   background-position-y: 144px;
   bottom: 0;
   transition: 0.3s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 496px) {
   .latest-offers .phones {
-    max-width: 312px;
+    width: 100%;
   }
 }
 .latest-offers .phones .phones-text p {
@@ -335,16 +348,16 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   height: 792px;
   box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
   padding: 115px 0;
-  background-image: url("../images/card1_4.png");
+  background-image: url("../images/card1_4.jpg");
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 252px;
   bottom: 0;
   transition: 0.4s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 496px) {
   .latest-offers .tablet {
-    max-width: 312px;
+    width: 100%;
   }
 }
 .latest-offers .tablet .tablet-text p {
@@ -406,11 +419,14 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 .most-selled article {
   max-width: 303px;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: 0.4s;
 }
 @media screen and (max-width: 992px) {
   .most-selled article {
     display: inline-block;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 }
 .most-selled article .best-selled-text {
@@ -445,23 +461,26 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   font-size: 18px;
   line-height: 22px;
 }
+.most-selled article:hover {
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
+}
 
 .best-items {
   padding-top: 47px;
   padding-bottom: 13px;
   text-align: center;
 }
-.best-items h2 {
+.best-items h3 {
   font-style: normal;
   font-weight: 400;
   color: #000000;
   font-family: "Readex Pro", sans-serif;
   font-size: 42px;
   line-height: 52px;
-  margin-bottom: 9px;
+  margin-bottom: 15px;
 }
 @media screen and (max-width: 767px) {
-  .best-items h2 {
+  .best-items h3 {
     font-size: 32px;
     line-height: 42px;
   }
@@ -477,10 +496,11 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 }
 .best-items article {
   max-width: 413px;
-  height: 453px;
   background-color: #F8F9FA;
   border-radius: 16px;
   padding-top: 41px;
+  padding-bottom: 10px;
+  transition: 0.4s;
 }
 @media screen and (max-width: 992px) {
   .best-items article {
@@ -526,6 +546,9 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   .best-items article img {
     width: 90%;
   }
+}
+.best-items article:hover {
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.25);
 }
 
 .ideas {
@@ -618,7 +641,10 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   padding-top: 51px;
   padding-bottom: 19px;
 }
-.information h3 {
+.information .search {
+  padding-bottom: 68px;
+}
+.information .search h3 {
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -628,20 +654,17 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   margin-bottom: 24px;
 }
 @media screen and (max-width: 992px) {
-  .information h3 {
+  .information .search h3 {
     font-size: 38px;
     line-height: 42px;
   }
 }
-.information .search {
-  padding-bottom: 68px;
-}
 .information .search .form-inline {
   max-width: 650px;
-  padding-bottom: 18px;
 }
 .information .search .form-inline .form-control {
   padding: 22px 63px;
+  margin-bottom: 18px;
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -658,14 +681,15 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   background-image: url("../images/search.svg");
   width: 25px;
   height: 25px;
-  left: 25px;
+  left: 22px;
+  top: 17px;
 }
-.information .search .keywords {
+.information .search .form-inline .keywords {
   max-width: 660px;
   padding: 0 60px;
   gap: 5px;
 }
-.information .search .keywords a {
+.information .search .form-inline .keywords a {
   padding: 13px 22px;
   background-color: #FFFFFF;
   border: 1px solid #C5C5C5;
@@ -677,26 +701,30 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   font-size: 14px;
   line-height: 17px;
   text-decoration: none;
+  transition: 0.4s;
+}
+.information .search .form-inline .keywords a:hover {
+  background-color: #DCE5E2;
 }
 @media screen and (max-width: 550px) {
-  .information .search .keywords a:nth-child(4) {
+  .information .search .form-inline .keywords a:nth-child(4) {
     display: none;
   }
-  .information .search .keywords a:nth-child(5) {
+  .information .search .form-inline .keywords a:nth-child(5) {
     display: none;
   }
-  .information .search .keywords a:nth-child(6) {
+  .information .search .form-inline .keywords a:nth-child(6) {
     display: none;
   }
 }
 @media screen and (max-width: 430px) {
-  .information .search .keywords a:nth-child(2) {
+  .information .search .form-inline .keywords a:nth-child(2) {
     display: none;
   }
-  .information .search .keywords a:nth-child(7) {
+  .information .search .form-inline .keywords a:nth-child(7) {
     display: none;
   }
-  .information .search .keywords a:nth-child(9) {
+  .information .search .form-inline .keywords a:nth-child(9) {
     display: none;
   }
 }
