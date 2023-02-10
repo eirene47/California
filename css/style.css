@@ -1,3 +1,5 @@
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
 .container {
   max-width: 1294px;
 }
@@ -18,6 +20,10 @@ header .navbar-light .navbar-nav .nav-item .nav-link {
   font-size: 14px;
   line-height: 17px;
   text-transform: uppercase;
+  transition: 0.2s;
+}
+header .navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: #779a8e;
 }
 header .navbar-light .navbar-nav .nav-item .dropdown-toggle:after {
   border: none;
@@ -47,6 +53,12 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   header .navbar-light .list .navbar-nav li {
     margin-left: 13px;
   }
+}
+header .navbar-light .list .icon {
+  transition: 0.2s;
+}
+header .navbar-light .list .icon:hover {
+  transform: scale(1.2);
 }
 @media screen and (max-width: 360px) {
   header .navbar-light .list {
@@ -665,6 +677,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 .information .search .form-inline .form-control {
   padding: 22px 63px;
   margin-bottom: 18px;
+  box-shadow: none;
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -689,7 +702,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   padding: 0 60px;
   gap: 5px;
 }
-.information .search .form-inline .keywords a {
+.information .search .form-inline .keywords span {
   padding: 13px 22px;
   background-color: #FFFFFF;
   border: 1px solid #C5C5C5;
@@ -700,31 +713,31 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 17px;
-  text-decoration: none;
+  cursor: pointer;
   transition: 0.4s;
 }
-.information .search .form-inline .keywords a:hover {
+.information .search .form-inline .keywords span:hover {
   background-color: #DCE5E2;
 }
 @media screen and (max-width: 550px) {
-  .information .search .form-inline .keywords a:nth-child(4) {
+  .information .search .form-inline .keywords span:nth-child(4) {
     display: none;
   }
-  .information .search .form-inline .keywords a:nth-child(5) {
+  .information .search .form-inline .keywords span:nth-child(5) {
     display: none;
   }
-  .information .search .form-inline .keywords a:nth-child(6) {
+  .information .search .form-inline .keywords span:nth-child(6) {
     display: none;
   }
 }
 @media screen and (max-width: 430px) {
-  .information .search .form-inline .keywords a:nth-child(2) {
+  .information .search .form-inline .keywords span:nth-child(2) {
     display: none;
   }
-  .information .search .form-inline .keywords a:nth-child(7) {
+  .information .search .form-inline .keywords span:nth-child(7) {
     display: none;
   }
-  .information .search .form-inline .keywords a:nth-child(9) {
+  .information .search .form-inline .keywords span:nth-child(9) {
     display: none;
   }
 }
@@ -775,6 +788,7 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
 }
 .information .sign-up .form-sign-up .form-group .form-control {
   padding: 16px 32px;
+  box-shadow: none;
   font-style: normal;
   font-weight: 400;
   color: #000000;
@@ -806,6 +820,10 @@ header .navbar-light .navbar-nav .nav-item .dropdown-menu .dropdown-item {
   border-radius: 0 200px 200px 0;
   width: 115px;
   height: 50px;
+  transition: 0.3s;
+}
+.information .sign-up .form-sign-up .btn-dark:hover {
+  background-color: #2b5876;
 }
 @media screen and (max-width: 576px) {
   .information .sign-up .form-sign-up .btn-dark {
@@ -871,6 +889,10 @@ footer .logo .footer-list ul li a {
   font-size: 17px;
   line-height: 22px;
   text-decoration: none;
+  transition: 0.2s;
+}
+footer .logo .footer-list ul li a:hover {
+  color: #779a8e;
 }
 @media screen and (max-width: 992px) {
   footer .logo .footer-list ul li a {
@@ -895,6 +917,7 @@ footer .authors a {
   font-size: 18px;
   line-height: 22px;
   text-decoration: none;
+  transition: 0.2s;
 }
 footer .authors a span {
   font-style: normal;
@@ -930,6 +953,9 @@ footer .authors a:after {
   footer .authors a:after {
     display: none;
   }
+}
+footer .authors a:hover {
+  color: #779a8e;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,6 @@
+@import "owl.carousel.css";
+@import "owl.theme.default.css";
+
 $font-inter: 'Inter', sans-serif;
 $font-readex: 'Readex Pro', sans-serif;
 
@@ -33,7 +36,6 @@ $font-readex: 'Readex Pro', sans-serif;
     @content;
   }
 }
-
 .container{
   max-width: 1294px;
 }
@@ -51,6 +53,10 @@ header{
           font-size: 14px;
           line-height: 17px;
           text-transform: uppercase;
+          transition: 0.2s;
+          &:hover{
+            color: #779a8e;
+          }
         }
         .dropdown-toggle{
           &:after{
@@ -81,7 +87,13 @@ header{
            flex-direction: row;
            li{
              margin-left: 13px;
+             }
            }
+         }
+       .icon{
+         transition: 0.2s;
+         &:hover{
+           transform: scale(1.2);
          }
        }
        @include max-screen(360px){
@@ -586,6 +598,7 @@ header{
       .form-control{
         padding: 22px 63px;
         margin-bottom: 18px;
+        box-shadow: none;
         @include basic-text;
         font-family: $font-inter;
         font-size: 14px;
@@ -607,7 +620,7 @@ header{
         max-width: 660px;
         padding: 0 60px;
         gap: 5px;
-        a{
+        span{
           padding: 13px 22px;
           background-color: #FFFFFF;
           border: 1px solid #C5C5C5;
@@ -616,7 +629,7 @@ header{
           font-family: $font-inter;
           font-size: 14px;
           line-height: 17px;
-          text-decoration: none;
+          cursor: pointer;
           transition: 0.4s;
           &:hover{
             background-color: #DCE5E2;
@@ -683,6 +696,7 @@ header{
         margin: inherit;
         .form-control{
           padding: 16px 32px;
+          box-shadow: none;
           @include basic-text;
           font-family: $font-inter;
           font-size: 14px;
@@ -709,6 +723,10 @@ header{
         border-radius: 0 200px 200px 0;
         width: 115px;
         height: 50px;
+        transition: 0.3s;
+        &:hover{
+          background-color: #2b5876;
+        }
         @include max-screen(576px){
           border-radius: 200px;
           margin-top: 10px;
@@ -761,6 +779,10 @@ footer{
             font-size: 17px;
             line-height: 22px;
             text-decoration: none;
+            transition: 0.2s;
+            &:hover{
+              color: #779a8e;
+            }
             @include max-screen(992px){
               font-size: 15px;
               line-height: 20px;
@@ -805,6 +827,10 @@ footer{
         @include max-screen(576px){
           display: none;
         }
+      }
+      transition: 0.2s;
+      &:hover{
+        color: #779a8e;
       }
     }
   }
